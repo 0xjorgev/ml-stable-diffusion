@@ -87,7 +87,7 @@ public struct Decoder: ResourceManaging {
                "Decoding model output has \(channelCount) channels, expected 3")
         let height = array.shape[2]
         let width = array.shape[3]
-
+        print("width: \(width), height: \(height)")
         // Normalize each channel into a float between 0 and 1.0
         let floatChannels = (0..<channelCount).map { i in
 
