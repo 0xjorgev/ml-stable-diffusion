@@ -79,7 +79,8 @@ public struct SafetyChecker: ResourceManaging {
                 // No adjustment, use default threshold
                 adjustmentName : MLMultiArray(MLShapedArray<Float32>(scalars: [0], shape: [1])),
                 // Supplying dummy images to be filtered (will be ignored)
-                imagesNames    : MLMultiArray(shape:[1, 512, 512, 3], dataType: .float16)
+               imagesNames    : MLMultiArray(shape:[1, 256, 256, 3], dataType: .float16)
+//                 imagesNames    : MLMultiArray(shape:[1, 512, 512, 3], dataType: .float16)
             ]
         ) else {
             throw SafetyCheckError.modelInputFailure
