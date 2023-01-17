@@ -63,8 +63,11 @@ public struct SafetyChecker: ResourceManaging {
         }
         let inputShape = inputInfo[inputName]!.multiArrayConstraint!.shape
 
-        let width = inputShape[2].intValue
-        let height = inputShape[3].intValue
+//         let width = inputShape[2].intValue
+//         let height = inputShape[3].intValue
+        
+        let width = 256
+        let height = 256
 
         let resizedImage = try resizeToRGBA(image, width: width, height: height)
 
